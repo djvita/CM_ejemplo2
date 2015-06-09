@@ -48,5 +48,8 @@ int iIndex = 0;
     self.lblWelcome.text = maMsgs[iIndex];
     iIndex++;
     self.lblWelcome.adjustsFontSizeToFitWidth = YES;
+    if(iIndex >= maMsgs.count){
+        iIndex =0;
+    }
 }
 @end
