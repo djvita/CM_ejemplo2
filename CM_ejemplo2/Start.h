@@ -12,6 +12,7 @@
 //labels
 @property (strong, nonatomic) IBOutlet UILabel *lblWelcome;
 
+- (IBAction)btn1Pressed:(id)sender;
 
 @end
 
