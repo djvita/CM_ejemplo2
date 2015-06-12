@@ -37,7 +37,7 @@ int iIndex = 0;
     self.lblWelcome.text = @"Que Calor";
     
     maMsgs = [[NSMutableArray alloc] init];
-    maMsgs = [[NSMutableArray alloc] initWithObjects:@"walter", @"Carlos", nil];
+    maMsgs = [[NSMutableArray alloc] initWithObjects:@"walter", @"Carlos", @"Vita", @"Toto", @"Andrea", nil];
     
     
 
@@ -51,5 +51,25 @@ int iIndex = 0;
     if(iIndex >= maMsgs.count){
         iIndex =0;
     }
+}
+
+- (IBAction)tnLeftPressed:(id)sender {
+    
+    iIndex--;
+    self.lblWelcome.adjustsFontSizeToFitWidth = YES;
+    if(iIndex  < 0){
+        iIndex = maMsgs.count - 1;
+    }
+    self.lblWelcome.text = maMsgs[iIndex];
+}
+
+- (IBAction)btnRightPressed:(id)sender {
+    self.lblWelcome.text = maMsgs[iIndex];
+    iIndex++;
+    self.lblWelcome.adjustsFontSizeToFitWidth = YES;
+    if(iIndex >= maMsgs.count){
+        iIndex =0;
+    }
+    
 }
 @end

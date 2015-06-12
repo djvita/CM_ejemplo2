@@ -14,5 +14,10 @@
 
 - (IBAction)btn1Pressed:(id)sender;
 
+- (IBAction)tnLeftPressed:(id)sender;
+
+- (IBAction)btnRightPressed:(id)sender;
+
+
 @end
 
